@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>drag and sort</title>
+	<link href="style.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	<div class="container">
+		<!-- 头条不参与排序 -->
+		<div id="top8">头条1+8不参与排序</div>
+
+		<!-- 独立频道 -->
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="动漫">动漫</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="体育">体育</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="综艺">综艺</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="电影">电影</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="电视剧">电视剧</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="娱乐">娱乐</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="搞笑">搞笑</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		<div drag-mode="individual" class="drawer dragmodule">
+			<div class="drag-scar">点击这里拖动</div>
+			<div class="drag-banner">
+				<div class="drag-tag" drag-name="自频道">自频道</div>
+				<div class="drag-totop">置顶</div>
+			</div>
+			<div class="row">
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+				<div class="v">视频</div>
+			</div>
+		</div>
+		
+		<div class="segment">
+			<span>以下为订阅用户</span>
+		</div>
+
+		<!-- 所有订阅频道在一个容器内，排序规则需特殊处理 -->
+		<div drag-mode="container" class="dragmodule">
+			<div drag-mode="inherit" class="drawer dragmodule">
+				<div class="drag-scar">点击这里拖动</div>
+				<div class="drag-banner">
+					<div class="drag-tag subscribe-logo" drag-name="暴走漫画"><img src="images/baozou.png"></div>
+					<div class="drag-totop">置顶</div>
+				</div>
+				<div class="row">
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+				</div>
+			</div>
+
+			<div drag-mode="inherit" class="drawer dragmodule">
+				<div class="drag-scar">点击这里拖动</div>
+				<div class="drag-banner">
+					<div class="drag-tag subscribe-logo" drag-name="简笔漫画"><img src="images/jb.jpg"></div>
+					<div class="drag-totop">置顶</div>
+				</div>
+				<div class="row">
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+				</div>
+			</div>
+
+			<div drag-mode="inherit" class="drawer dragmodule">
+				<div class="drag-scar">点击这里拖动</div>
+				<div class="drag-banner">
+					<div class="drag-tag subscribe-logo" drag-name="万万没想到"><img src="images/ww.jpg"></div>
+					<div class="drag-totop">置顶</div>
+				</div>
+				<div class="row">
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+				</div>
+			</div>
+
+			<div drag-mode="inherit" class="drawer dragmodule">
+				<div class="drag-scar">点击这里拖动</div>
+				<div class="drag-banner">
+					<div class="drag-tag subscribe-logo" drag-name="男神女神"><img src="images/nv.jpg"></div>
+					<div class="drag-totop">置顶</div>
+				</div>
+				<div class="row">
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+					<div class="v">视频</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+
+	<script type="text/javascript" src="../sort.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			dragmodule.init(true,true,function(){
+				console.log("done");
+			});
+		});
+	</script>
+</body>
+</html>

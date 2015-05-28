@@ -1,0 +1,220 @@
+.box-shadow(@style, @color) {
+	box-shadow: @style @color;
+	-webkit-box-shadow: @style @color;
+	-moz-box-shadow: @style @color;
+	-o-box-shadow: @style @color;
+	-ms-box-shadow: @style @color;
+}
+.text-shadow(@style, @color) {
+	text-shadow: @style, @color;
+	-webkit-text-shadow: @style, @color;
+	-moz-text-shadow: @style, @color;
+	-o-text-shadow: @style, @color;
+}
+.transition(@rule) {
+	transition: @rule;
+	-webkit-transition: @rule;
+	-moz-transition: @rule;
+	-o-transition: @rule;
+}
+body {
+	width: 1190px;
+	padding: 20px 50px;
+	margin: 0 auto;
+}
+#top8 {
+	height: 400px;
+	margin-bottom: 20px;
+	background: #555;
+	color: #fff;
+	line-height: 400px;
+	text-align: center;
+	font-size: 88px;
+}
+.drawer {
+	font-family: "Microsoft YaHei", "微软雅黑", helvetica, "黑体", arial, verdana, tahoma, sans-serif;
+
+	.drag-scar {
+		background-color: #bbb;
+		height: 24px;
+		color: #000;
+		text-align: center;
+		line-height: 24px;
+		cursor: move;
+		visibility: hidden;
+		margin-bottom: 10px;
+	}
+	&:hover {
+		background-color: #f5f5f5;
+
+		.drag-scar {
+			visibility: visible;
+		}
+	}
+}
+.drag-banner {
+	float: left;
+	// margin-left: 10px;
+	cursor: pointer;
+
+	.drag-totop {
+		color: #fff;
+		background-color: #1c98e7;
+		margin-top: 5px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		border: solid 1px #2147AB;
+		display: none;
+	}
+	&:hover {
+		.drag-totop {
+			display: block;
+		}
+	}
+}
+.drag-tag {
+	height: 80px;
+	width: 80px;
+	background: #16A9F0;
+	line-height: 80px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+}
+.subscribe-logo {
+	height: 78px;
+	width: 78px;
+	border: #ddd solid 1px;
+
+	img {
+		width: 78px;
+		height: 78px;
+	}
+}
+.row {
+	text-align: center;
+	line-height: 180px;
+	font-size: 44px;
+	margin-left: 100px;
+
+	.v {
+		width: 230px;
+		margin-right: 20px;
+		display: inline-block;
+		background: #26B8F1;
+		margin-bottom: 20px;
+	}
+}
+.yk-draglist {
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 111111111;
+	display: none;
+
+	.box {
+		width: 1190px;
+		height: 100%;
+		position: relative;
+		margin: 0 auto;
+		z-index: 100;
+		padding: 0 50px;
+		background: linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		background: -moz-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		background: -o-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		background: -ms-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
+		cursor: move;
+
+		.list {
+			list-style: none;
+			padding: 0;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			.transition(all 0.2s);
+		}
+		.entry {
+			margin-left: 10px;
+			font-size: 18px;
+			font-family: "Microsoft YaHei", "微软雅黑", helvetica, "黑体", arial, verdana, tahoma, sans-serif;
+		}
+		.dragging {
+			z-index: 100;
+
+			.entry {
+				font-size: 24px;
+				.text-shadow(0px 0px 10px, #fff);
+			}
+			.drag-tag {
+				.box-shadow (0px 0px 70px, #fff);
+			}
+		}
+	}
+	.drag-tag, .entry {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.dragbanner-prev {
+		top: 0;
+
+		.banner-prev {
+			background-position: 0 0;
+		}
+	}
+	.dragbanner-next {
+		bottom: 0;
+
+		.banner-next {
+			background-position: 0 -60px;
+		}
+	}
+	.dragitem {
+		margin-bottom: 20px;
+		position: absolute;
+		transition: all 0.1s;
+		-webkit-transition: all 0.1s;
+		-moz-transition: all 0.1s;
+		-o-transition: all 0.1s;
+		-ms-transition: all 0.1s;
+		z-index: 10;
+	}
+	.dragitem-blank {
+		display: none;
+		background: none;
+		border: dotted 2px #3399e0;
+		box-sizing: border-box;
+	}
+}
+.dragbanner {
+	display: none;
+	height: 60px;
+	width: 200px;
+	position: absolute;
+	left: 20px;
+	z-index: 200;
+
+	.banner {
+		background: url(/index/img/2013/dragbanner.png) no-repeat;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+.segment {
+	margin: 20px 0;
+	text-align: center;
+	height: 2px;
+	background: #555;
+	line-height: 1px;
+
+	span {
+		background: #fff;
+		padding: 0 20px;
+	}
+}
